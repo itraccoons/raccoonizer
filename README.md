@@ -1,4 +1,3 @@
-
 # Continuous Integration for a Node JS application
 [![Run Status](https://api.shippable.com/projects/588579c63b653a0f00fa68d3/badge?branch=master)](https://app.shippable.com/projects/588579c63b653a0f00fa68d3)
 [![Coverage Badge](https://api.shippable.com/projects/588579c63b653a0f00fa68d3/coverageBadge?branch=master)](https://app.shippable.com/projects/588579c63b653a0f00fa68d3)
