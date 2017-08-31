@@ -1,0 +1,18 @@
+- pipeline: "R"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "master"
+  target_site_url: "http://doe.cloud"
+  actions:
+  - action: "Execute: npm install"
+    type: "BUILD"
+    docker_image_name: "library/node"
+    docker_image_tag: "6"
+    execute_commands:
+    - "# Working directory with cloned repository: /buddy/raccoonizer"
+    - "# Click the link at the bottom for more options"
+    - "npm install"
+    setup_commands:
+    - "# Executed on the first pipeline execution only"
+    - "# Popular use case: install packages required by your Run Commands"
+    - "# Changing the image in the Environment tab will run the commands again"
+    - "npm install -g gulp grunt-cli"
