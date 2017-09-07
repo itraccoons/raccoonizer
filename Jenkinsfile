@@ -20,5 +20,10 @@ ls -la
 docker ps'''
       }
     }
+    stage('Run container') {
+      steps {
+        sh 'docker run --name doe-nginx -p 8111:80 -d nginx'
+      }
+    }
   }
 }
