@@ -8,7 +8,12 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'which docker'
+        echo 'Init'
+      }
+    }
+    stage('Run') {
+      steps {
+        sh 'echo TEST'
       }
     }
   }
