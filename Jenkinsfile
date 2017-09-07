@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'npm install grunt-cli'
+        sh 'npm install mocha --save-dev'
       }
     }
   }
