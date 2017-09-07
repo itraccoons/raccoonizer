@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'nginx:alphine'
       args '-p 8111:80'
+      image 'nginx:alpine'
     }
     
   }
