@@ -12,12 +12,17 @@ pipeline {
         echo 'Init'
       }
     }
-    stage('Checks') {
+    stage('Check docker') {
       steps {
         sh '''hostname
 pwd
 ls -la
 docker ps'''
+      }
+    }
+    stage('Run conteirner') {
+      steps {
+        sh 'docker run --name doe-nginx -p 8111:80 nginx'
       }
     }
   }
