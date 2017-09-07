@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'nginx:alpine'
-    }
-    
-  }
+  agent none
   stages {
     stage('init') {
       steps {
@@ -13,7 +8,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'whereis docker'
+        sh 'docker -v'
       }
     }
   }
