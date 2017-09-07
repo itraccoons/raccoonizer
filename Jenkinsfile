@@ -9,12 +9,11 @@ pipeline {
     stage('init') {
       steps {
         echo 'Init'
-        ws(dir: '/vagrant/workdir')
       }
     }
     stage('Run') {
       steps {
-        sh 'echo TEST'
+        sh 'whereis docker'
       }
     }
   }
