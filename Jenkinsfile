@@ -1,7 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'bash:latest'
+      image 'docker:latest'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
     
   }
@@ -15,7 +16,8 @@ pipeline {
       steps {
         sh '''hostname
 pwd
-ls -la'''
+ls -la
+docker -v'''
       }
     }
   }
