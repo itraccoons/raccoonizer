@@ -11,5 +11,10 @@ pipeline {
         sh 'npm install mocha --save-dev'
       }
     }
+    stage('test') {
+      steps {
+        sh 'mocha test'
+      }
+    }
   }
 }
