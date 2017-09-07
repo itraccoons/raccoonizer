@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'npm install mocha --save-dev'
+        sh '''npm install mocha --save-dev
+npm install --save glob'''
       }
     }
     stage('test') {
