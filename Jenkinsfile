@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    docker {
+      image 'bash:alpine'
+    }
+    
+  }
   stages {
     stage('init') {
       steps {
