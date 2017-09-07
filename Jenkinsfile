@@ -22,7 +22,7 @@ docker ps'''
     }
     stage('Run container') {
       steps {
-        sh '''docker rm doe-nginx
+        sh '''docker rm --force doe-nginx
 docker run --name doe-nginx -p 8111:80 -d nginx'''
       }
     }
