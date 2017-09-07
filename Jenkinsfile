@@ -10,7 +10,6 @@ pipeline {
     stage('init') {
       steps {
         echo 'Init'
-        junit 'TestResults'
       }
     }
     stage('Check docker') {
