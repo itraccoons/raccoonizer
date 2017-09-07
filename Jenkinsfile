@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'bash:alpine'
+      image 'bash:latest'
     }
     
   }
