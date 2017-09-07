@@ -11,9 +11,11 @@ pipeline {
         echo 'Init'
       }
     }
-    stage('Run') {
+    stage('Checks') {
       steps {
-        sh 'ls -la'
+        sh '''hostname
+pwd
+ls -la'''
       }
     }
   }
