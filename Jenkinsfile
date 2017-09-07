@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        echo 'init'
+        sh 'docker run --name doe-www -p 81:80 -v /vagrant/www/:/usr/share/nginx/html'
       }
     }
   }
