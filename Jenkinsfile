@@ -17,7 +17,7 @@ pipeline {
         sh '''hostname
 pwd
 ls -la
-docker -v'''
+docker ps'''
       }
     }
   }
