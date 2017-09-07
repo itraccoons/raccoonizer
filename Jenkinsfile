@@ -9,6 +9,7 @@ pipeline {
     stage('init') {
       steps {
         echo 'Init'
+        ws(dir: '/vagrant/workdir')
       }
     }
     stage('Run') {
