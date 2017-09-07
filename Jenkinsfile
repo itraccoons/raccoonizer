@@ -13,7 +13,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh './node_modules/mocha/bin/mocha test'
+        sh './node_modules/mocha/bin/mocha --recursive "**/*.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml'
       }
     }
   }
