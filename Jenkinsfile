@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Run') {
       steps {
-        sh 'docker -v'
+        sh 'ls -la'
       }
     }
   }
